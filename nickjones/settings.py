@@ -36,8 +36,8 @@ SECRET_KEY = 'django-insecure-nowu6!vekwhh=2-1m7j#ro3k$tw+u&b-meg2p3cwz39^6zt%s8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-if not DEBUG:
-    CSRF_TRUSTED_ORIGINS = ['https://surround-yorself-with-killers-production.up.railway.app/login/']
+
+CSRF_TRUSTED_ORIGINS = ['https://surround-yorself-with-killers-production.up.railway.app/']
 
 ALLOWED_HOSTS = ['*']
 
