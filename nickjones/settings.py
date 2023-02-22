@@ -39,7 +39,7 @@ DEBUG = True
 if not DEBUG:
     CSRF_TRUSTED_ORIGINS = ['https://surround-yorself-with-killers-production.up.railway.app/']
 
-ALLOWED_HOSTS = ['https://surround-yorself-with-killers-production.up.railway.app']
+ALLOWED_HOSTS = ['104.196.232.237']
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'frontpage'
