@@ -1,0 +1,93 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<div class="home__div1">
+    <div class="home__div2">
+      <img
+        src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/b7f33355-285b-44d2-990e-615c1cc38376/thumb_1.png"
+        class="home__img1"
+        alt=""
+      />
+      <p>Surround yorself with killers</p>
+      <div class="home__div3">
+        {% for message in messages %}
+              <div class="alert alert-success alert__div">
+                  {{ message }}
+              </div>
+              {% endfor %}
+        <form action="." method="post">
+          {% csrf_token %}
+          <div class="home__div4">
+            {{ form }}
+            <input style="cursor: pointer;" type="submit" value="Subscribe" class="home__button" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="home__div5">
+    <div class="home__div6">
+      {% if posts %}
+      <div class="home__div7">
+        {% for post in posts %}
+        <a style="text-decoration: none; color: #000;" href="{% url 'detail' post.slug %}">
+          <div class="home__div8">
+            <div class="home__div9">
+              {% if post.image %}
+                <img
+                src="{{ post.image.url }}"
+                class="home__img2"
+                alt=""
+                />
+              {% else %}
+                <img
+                src="https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/publication/logo/b7f33355-285b-44d2-990e-615c1cc38376/1.png"
+                class="home__img2"
+                alt=""
+                />
+              {% endif %}
+            </div>
+            <div class="home__div10">
+              <p>{{ post.title }}</p>
+              <p>Nick Jones / {{ post.date|date:'M d, Y' }}</p>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="home__div00001">
+        <p class="nothing">Nothing to show over here</p>
+        <p class="hho">Trying Searching something else :)</p>
+      </div>
+      {% endif %}
+      <form action="{% url 'search' %}" method="get">
+        <div class="home__div11">
+            <div class="home__div12">
+              <svg
+                class="home__svg1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+              >
+                <path
+                  d="M24.293,25.708,19.18,20.594A11.668,11.668,0,0,1,0,11.667,11.666,11.666,0,0,1,19.916,3.417a11.668,11.668,0,0,1,.677,15.762l5.113,5.113a1,1,0,0,1-1.414,1.415ZM2,11.667a9.662,9.662,0,0,0,16.414,6.917,1.006,1.006,0,0,1,.17-.17A9.665,9.665,0,1,0,2,11.667Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <input
+                placeholder="Search posts"
+                type="text"
+                class="home__input2"
+                name="query"
+                id=""
+              />
+            </div>
+            <div class="home__div13"></div>
+          </div>
+      </form>
+    </div>
+  </div>
+{% endblock content %}

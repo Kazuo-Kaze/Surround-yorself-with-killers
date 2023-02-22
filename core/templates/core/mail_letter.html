@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div id="connnn" class="container">
+    <div class="row mt-5 pt-0">
+        <div class="col-md-6 offset-md-3">
+            {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+            {% endfor %}
+            <div id="caarrd" class="card">
+                <div class="card-body">
+                    <form method="post" action="." enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input id="subbbb" class="send__button btn btn-info btn-block" type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

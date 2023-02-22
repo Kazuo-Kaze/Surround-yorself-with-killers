@@ -1,0 +1,50 @@
+{% extends "core/base.html" %} 
+
+{% block content %}
+<div class="detail__div1">
+  <div class="detail__div2">
+    <div class="detail__div001">
+      <a style="text-decoration: none; color: #000;" href="{% url 'frontpage' %}">
+        <div class="detail__div3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              aria-hidden="true"
+              class="h-5 w-5 text-gray-400 detail__svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11 17l-5-5m0 0l5-5m-5 5h12"
+              ></path>
+            </svg>
+          </div>
+      </a>
+      <div class="detail__div4">
+        <p>{{ post.title }}</p>
+        <p>{{ post.date|date:'M d, Y' }}</p>
+      </div>
+    </div>
+    <div class="detail__div5">
+      <p>
+        {{ post.first_para }}
+      </p>
+      <p>
+        {{ post.second_para }}
+      </p>
+      <p>
+        {{ post.third_para }}
+      </p>
+      <p>
+        {{ post.fourth_para }}
+      </p>
+      <p>
+        {{ post.fifth_para }}
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock content %}
