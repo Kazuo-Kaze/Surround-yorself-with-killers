@@ -858,14 +858,14 @@ body::-webkit-scrollbar {
   }
   
   .detail__div4 p:nth-child(1) {
-    font-size: 4vw;
-    width: 70vw;
+    font-size: 5vw;
+    width: 80vw;
     font-weight: 600;
   }
   
   
   .detail__div4 p:nth-child(2) {
-    font-size: 2.3vw;
+    font-size: 2.8vw;
     line-height: 0.1vw;
     margin-top: -2vw;
   }
@@ -875,8 +875,8 @@ body::-webkit-scrollbar {
     width: 80vw;
     margin-left: 2vw;
     margin-bottom: 7vw;
-    font-size: 2.8vw;
-    line-height: 5vw;
+    font-size: 3.5vw;
+    line-height: 7vw;
   }
   
   .send__button {
