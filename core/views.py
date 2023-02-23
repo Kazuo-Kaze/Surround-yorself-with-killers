@@ -102,5 +102,14 @@ def search(request):
 
 
 def detailPage(request, slug):
+    form = EmailForm(request.POST)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thanks for Subscribing')
+            form = EmailForm()
+        else:
+            form = EmailForm()
+
     post = get_object_or_404(MailMessage, slug=slug)
-    return render(request, "core/detail.html", { 'post': post})
+    return render(request, "core/detail.html", { 'post': post, 'form': form})
