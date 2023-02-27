@@ -1,10 +1,12 @@
 {% extends "core/base.html" %}
 
+{% load static %}
+
 {% block content %}
 <div class="home__div1">
     <div class="home__div2">
       <img
-        src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/b7f33355-285b-44d2-990e-615c1cc38376/thumb_1.png"
+        src="{% static "img/web_logo.jpg" %}"
         class="home__img1"
         alt=""
       />
