@@ -26,6 +26,8 @@ body {
   height: 100%;
 }
 
+
+
 body::-webkit-scrollbar {
   width: 0vw;
 }
@@ -157,7 +159,7 @@ body::-webkit-scrollbar {
 }
 
 .home__img1 {
-  height: 9vw;
+  height: 12vw;
   border-radius: 0.5vw;
 }
 
@@ -627,7 +629,7 @@ body::-webkit-scrollbar {
   }
   
   .home__img1 {
-    height: 21vw;
+    height: 28vw;
     border-radius: 1.5vw;
   }
   
